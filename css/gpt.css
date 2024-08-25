@@ -1,0 +1,177 @@
+/* General document styling */
+body {
+    font-family: 'Manrope', sans-serif; /* Using Google Font */
+    font-size: 1.3em; /* Adjusted for consistency */
+    line-height: 1.5;
+    margin: 1in; /* Default LaTeX margins */
+    color: #424242; /* Adjusted text color */
+    background-color: #fff; /* White background */
+    padding: 0 10px; /* Adjusted padding */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Computer Modern', serif; /* Consistent heading font */
+    font-weight: bold;
+    color: #292929; /* Adjusted heading color */
+    line-height: 1.2; /* Consistent line height */
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.2em; }
+h6 { font-size: 1.1em; }
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: inherit;
+}
+
+h1:hover .anchor, h2:hover .anchor, h3:hover .anchor, h4:hover .anchor, h5:hover .anchor, h6:hover .anchor {
+    margin-left: -1.25em;
+    padding-left: 0.5em;
+}
+
+h1:hover .anchor .link-icon, h2:hover .anchor .link-icon, h3:hover .anchor .link-icon, h4:hover .anchor .link-icon, h5:hover .anchor .link-icon, h6:hover .anchor .link-icon {
+    display: inline-block;
+}
+
+/* Paragraphs and Blockquotes */
+p {
+    margin: 1em 0;
+    text-align: justify;
+}
+
+blockquote {
+    font-size: 10pt;
+    margin: 1em 1.5em;
+    padding-left: 1em;
+    border-left: 0.2em solid #000;
+}
+
+/* Code and Preformatted Text */
+pre, code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f8f8f8;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+pre {
+    overflow-x: auto;
+    margin-bottom: 1em;
+    line-height: 1;
+}
+
+code {
+    font-size: 0.8rem;
+    white-space: pre-wrap;
+}
+
+/* Lists */
+ul, ol {
+    margin: 1em 0;
+    padding-left: 2em;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+    font-size: 11pt;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 0.5em;
+    text-align: left;
+}
+
+/* Equations */
+.katex {
+    font-size: 1.3em;
+    line-height: 1.5;
+}
+
+/* Figures and Images */
+figure {
+    text-align: center;
+    margin: 1em 0;
+}
+
+figcaption {
+    font-size: 9pt;
+    margin-top: 0.5em;
+    font-style: italic;
+}
+
+/* Footnotes */
+sup.footnote-ref {
+    font-size: 8pt;
+    vertical-align: super;
+}
+
+.footnote-item {
+    font-size: 9pt;
+    margin-top: 0.5em;
+}
+
+/* Hyperlinks */
+a {
+    color: #265C83;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #4692c9;
+    text-decoration: none;
+}
+
+a:active {
+    color: #007BE6;
+}
+
+/* Utility Classes */
+.center-text { text-align: center; }
+.right { float: right; }
+.clearfix::after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.top-gap { margin-top: 10vh; }
+.top-gap-double-em { margin-top: 2em; }
+.bottom-gap { margin-bottom: 10vh; }
+
+.smaller-font { font-size: smaller; }
+.lighten { color: #5c5c5c; }
+
+.badge {
+    font-weight: bold;
+    background-color: #dbdbdb;
+    padding: 0 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+.monospace {
+    font-family: PragmataPro, Consolas, "Source Code Pro", Menlo, monospace;
+}
+
+.shaded-panel {
+    background-color: whitesmoke;
+    padding: 0.5em;
+    border-radius: 1px;
+}

@@ -1,478 +1,55 @@
-/* General document styling */
-body {
-    font-family: 'Times New Roman', Times, serif; /* Default LaTeX font */
-    font-size: 1.3em; /* LaTeX default font size */
-    line-height: 1.5; /* Similar to LaTeX's default line spacing */
-    margin: 1in; /* Default LaTeX margins */
-    color: #000; /* Standard text color */
-    background-color: #fff; /* White background */
+@font-face {
+    font-family: 'Perfect DOS VGA 437';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Perfect DOS VGA 437.woff') format('woff');
 }
-
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Computer Modern', serif; /* LaTeX's standard font for headings */
-    font-weight: bold;
-    font-size: 2em;
-    color: #000;
-    margin-top: 1.2em;
-    margin-bottom: 0.8em;
-}
-
-h1 { font-size: 1.8em; } /* Corresponds to \section */
-h2 { font-size: 1.6em; } /* Corresponds to \subsection */
-h3 { font-size: 1.4em; } /* Corresponds to \subsubsection */
-h4 { font-size: 1.2em; } /* Corresponds to \paragraph */
-h5 { font-size: 1.1em; } /* Corresponds to \subparagraph */
-h6 { font-size: 1.1em; }
-
-p {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    text-align: justify; /* Justified text like in LaTeX */
-}
-
-blockquote {
-    font-size: 10pt;
-    margin-left: 1.5em;
-    margin-right: 1.5em;
-    padding-left: 1em;
-    border-left: 0.2em solid #000;
-}
-
-pre, code {
-    font-family: 'Courier New', Courier, monospace; /* Monospaced font like in LaTeX */
-    background-color: #f8f8f8;
-    padding: 0.5em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-/* Lists */
-ul, ol {
-    margin-top: 1em;
-    margin-bottom: 1em;
-    padding-left: 2em;
-}
-
-li {
-    margin-bottom: 0.5em;
-}
-
-/* Tables */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 1em;
-    font-size: 11pt;
-}
-
-th, td {
-    border: 1px solid #000;
-    padding: 0.5em;
-    text-align: left;
-}
-
-/* Equations */
-.katex {
-    font-size: 1.3em;
-    line-height: 1.5;
-}
-
-/* Figures and Images */
-figure {
-    text-align: center;
-    margin: 1em 0;
-}
-
-figcaption {
-    font-size: 9pt;
-    margin-top: 0.5em;
-    font-style: italic;
-}
-
-/* Footnotes */
-sup.footnote-ref {
-    font-size: 8pt;
-    vertical-align: super;
-}
-
-.footnote-item {
-    font-size: 9pt;
-    margin-top: 0.5em;
-}
-
-/* Section and Subsection Styles */
-section {
-    margin-top: 2em;
-    margin-bottom: 2em;
-}
-
-section h1 {
-    margin-top: 0;
-}
-
-.subsection h2 {
-    margin-top: 1.5em;
-    margin-bottom: 1em;
-}
-
-/* Hyperlinks */
-a {
-    color: #000;
-    text-decoration: underline;
-}
-
-a:hover {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-/* // Useless Stuffs from local css */
-pre {
-	box-sizing: border-box;
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	overflow: auto;
-	overflow-y: hidden;
-	font-size: 12px;
-	line-height: 20px;
-	background: #efefef;
-	border: 1px solid #777;
-	background: url(lines.png) repeat 0 0;
-	padding: 10px;
-	color: #333;
-}
-
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      {   }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-    code span.at { color: #7d9029; } /* Attribute */
-    code span.bn { color: #40a070; } /* BaseN */
-    code span.bu { color: #008000; } /* BuiltIn */
-    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #4070a0; } /* Char */
-    code span.cn { color: #880000; } /* Constant */
-    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-    code span.dt { color: #902000; } /* DataType */
-    code span.dv { color: #40a070; } /* DecVal */
-    code span.er { color: #ff0000; font-weight: bold; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #40a070; } /* Float */
-    code span.fu { color: #06287e; } /* Function */
-    code span.im { color: #008000; font-weight: bold; } /* Import */
-    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-    code span.op { color: #666666; } /* Operator */
-    code span.ot { color: #007020; } /* Other */
-    code span.pp { color: #bc7a00; } /* Preprocessor */
-    code span.sc { color: #4070a0; } /* SpecialChar */
-    code span.ss { color: #bb6688; } /* SpecialString */
-    code span.st { color: #4070a0; } /* String */
-    code span.va { color: #19177c; } /* Variable */
-    code span.vs { color: #4070a0; } /* VerbatimString */
-    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-
-
-    /* // old css */
-
-@charset "UTF-8";
 
 @font-face {
-	font-family: "Manrope VF";
-	src: url("fonts/Manrope/static/Manrope-Regular.ttf") format("truetype-variations");
-	font-style: normal;
-	font-weight: 200 800;
+    font-family: 'Perfect DOS VGA 437 Win';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Perfect DOS VGA 437 Win.woff') format('woff');
 }
 
-body {
-	margin: 40px auto;
-	max-width: 650px;
-	line-height: 1.6;
-	font-size: 18px;
-	font-family: "Manrope VF", sans-serif;
-	color: #424242;
-	padding: 0 10px;
-	font-variant-numeric: lining-nums;
+.shahid {
+    font-family: 'Perfect DOS VGA 437', 'Perfect DOS VGA 437 Win', monospace;
+    font-size: 2rem; /* Adjust for size */
+    color: #33FF33; /* Classic retro green */
+    text-align: center;
+    letter-spacing: 0.1em; /* Adds a retro feel */
+    text-transform: uppercase;
+    background-color: #000; /* Background for contrast */
+    padding: 10px;
+    border: 2px solid #33FF33; /* Retro-styled border */
+    display: inline-block;
 }
 
-a {
-	color: #265C83;
+/* Basic styling for the <nav> element */
+nav {
+    background-color: #333;
+    padding: 10px;
 }
 
-a:link,
-a:visited {
-	color: #265C83;
+nav ul {
+    list-style-type: none;  /* Removes bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;  /* Arranges items in a row */
+    justify-content: center;  /* Centers the links */
 }
 
-a:hover {
-	color: #4692c9;
+nav ul li {
+    margin: 0 15px;  /* Spacing between items */
 }
 
-a:active {
-	color: #007BE6;
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Perfect DOS VGA 437', monospace; /* Adds the retro font */
+    font-size: 1.1rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	line-height: 1.2;
-	color: #292929;
-	position: relative;
+nav ul li a:hover {
+    color: #33FF33;  /* Retro green on hover */
 }
-
-h1 a,
-h1 a:link,
-h1 a:visited,
-h1 a:hover,
-h1 a:active,
-h2 a,
-h2 a:link,
-h2 a:visited,
-h2 a:hover,
-h2 a:active,
-h3 a,
-h3 a:link,
-h3 a:visited,
-h3 a:hover,
-h3 a:active,
-h4 a,
-h4 a:link,
-h4 a:visited,
-h4 a:hover,
-h4 a:active,
-h5 a,
-h5 a:link,
-h5 a:visited,
-h5 a:hover,
-h5 a:active,
-h6 a,
-h6 a:link,
-h6 a:visited,
-h6 a:hover,
-h6 a:active {
-	color: inherit;
-}
-
-h1 .anchor,
-h2 .anchor,
-h3 .anchor,
-h4 .anchor,
-h5 .anchor,
-h6 .anchor {
-	width: 1em;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-
-h1 .anchor .link-icon,
-h2 .anchor .link-icon,
-h3 .anchor .link-icon,
-h4 .anchor .link-icon,
-h5 .anchor .link-icon,
-h6 .anchor .link-icon {
-	display: none;
-	color: #c2c2c2;
-	font-weight: normal;
-}
-
-h1:hover .anchor,
-h2:hover .anchor,
-h3:hover .anchor,
-h4:hover .anchor,
-h5:hover .anchor,
-h6:hover .anchor {
-	margin-left: -1.25em;
-	padding-left: 0.5em;
-}
-
-h1:hover .anchor .link-icon,
-h2:hover .anchor .link-icon,
-h3:hover .anchor .link-icon,
-h4:hover .anchor .link-icon,
-h5:hover .anchor .link-icon,
-h6:hover .anchor .link-icon {
-	display: inline-block;
-}
-
-h1 {
-	font-size: 3rem;
-}
-
-pre {
-	overflow-x: auto;
-	margin-bottom: 1em;
-	line-height: 1;
-	padding: 5px 10px 10px;
-	border-radius: 3px;
-}
-
-code {
-	font-family: PragmataPro, Consolas, "Source Code Pro", Menlo, monospace;
-	font-size: 0.8rem;
-}
-
-header strong {
-	font-size: 2rem;
-	position: static;
-	display: block;
-	line-height: 1.2;
-}
-
-header strong a,
-header strong a:link,
-header strong a:visited,
-header strong a:hover,
-header strong a:active {
-	color: #292929;
-}
-
-article p {
-	-webkit-hyphens: auto;
-	-moz-hyphens: auto;
-	hyphens: auto;
-}
-
-.list-flat {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
-
-.list-flat li {
-	display: inline;
-}
-
-.list-spaced-left li {
-	margin-left: 1rem;
-}
-
-.list-spaced-right li {
-	margin-right: 1rem;
-}
-
-.no-decoration {
-	text-decoration: none;
-}
-
-.no-margin {
-	margin: 0;
-}
-
-.no-margin-top {
-	margin-top: 0;
-}
-
-.center-text {
-	text-align: center;
-}
-
-.right {
-	float: right;
-}
-
-.clearfix::after {
-	clear: both;
-	content: ".";
-	display: block;
-	font-size: 0;
-	line-height: 0;
-	height: 0;
-	overflow: hidden;
-}
-
-.top-gap {
-	margin-top: 10vh;
-}
-
-.top-gap-double-em {
-	margin-top: 2em;
-}
-
-.bottom-gap {
-	margin-bottom: 10vh;
-}
-
-.smaller-font {
-	font-size: smaller;
-}
-
-.lighten {
-	color: #5c5c5c;
-}
-
-.badge {
-	font-weight: bold;
-	background-color: #dbdbdb;
-	padding: 0 0.5rem;
-	border-radius: 0.5rem;
-	font-size: 0.75rem;
-	display: inline-block;
-	vertical-align: text-top;
-}
-
-.monospace {
-	font-family: PragmataPro, Consolas, "Source Code Pro", Menlo, monospace;
-}
-
-.shaded-panel {
-	background-color: whitesmoke;
-	padding: 0.5em;
-	border-radius: 1px;
-}
-

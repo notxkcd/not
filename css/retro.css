@@ -1,0 +1,60 @@
+/* Overall page styling */
+body {
+background-color: #1a1a1a;
+color: #e6e6e6;
+font-family: "Courier New", Courier, monospace;
+line-height: 1.6;
+padding: 20px;
+}
+
+/* Title styles */
+h1, h2, h3 {
+color: #00ff00;
+text-shadow: 1px 1px 2px #000;
+border-bottom: 1px solid #00ff00;
+padding-bottom: 5px;
+margin-top: 20px;
+margin-bottom: 10px;
+}
+
+/* Link styles */
+a {
+/* color: #ffcc00; */
+text-decoration: none;
+border-bottom: 1px dotted #ffcc00;
+}
+a:hover {
+color: #00ff00;
+border-bottom: 1px dotted #00ff00;
+}
+
+/* Table of contents */
+.TOC dl, .TOC dt, .TOC dd {
+color: #cccccc;
+}
+.TOC a {
+color: #66ccff;
+}
+
+/* Code block styling */
+pre, code {
+background-color: #333333;
+color: #ffcc00;
+padding: 5px;
+font-family: "Consolas", "Courier New", monospace;
+overflow-x: auto;
+border-radius: 5px;
+}
+
+/* Paragraph styling */
+p {
+margin-bottom: 10px;
+}
+
+/* Divider styling */
+hr {
+border: none;
+height: 1px;
+background-color: #444;
+margin: 20px 0;
+}

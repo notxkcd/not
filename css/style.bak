@@ -31,47 +31,30 @@ nav {
     padding: 10px;
 }
 
-/* Navigation list (Desktop View) */
 nav ul {
-    list-style-type: none;
+    list-style-type: none;  /* Removes bullet points */
     margin: 0;
     padding: 0;
     display: flex;  /* Arranges items in a row */
     justify-content: center;  /* Centers the links */
-    flex-wrap: wrap; /* Allows wrapping for smaller screens */
 }
 
-/* Each nav item */
 nav ul li {
-    margin: 10px 15px;  /* Spacing between items */
+    margin: 0 15px;  /* Spacing between items */
 }
 
-/* Links inside nav */
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-family: 'Perfect DOS VGA 437', monospace;
+    font-family: 'Perfect DOS VGA 437', monospace; /* Adds the retro font */
     font-size: 1.1rem;
 }
 
-/* Hover effect */
 nav ul li a:hover {
     color: #33FF33;  /* Retro green on hover */
 }
 
-/* Mobile styles */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center;  /* Center items */
-    }
 
-    nav ul li {
-        width: 100%; /* Full width for better spacing */
-        text-align: center;
-        margin: 5px 0; /* Adjust spacing */
-    }
-}
 
 .post {
     font-family: 'Perfect DOS VGA 437', 'Perfect DOS VGA 437 Win', monospace;

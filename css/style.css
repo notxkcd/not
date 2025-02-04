@@ -53,3 +53,23 @@ nav ul li a {
 nav ul li a:hover {
     color: #33FF33;  /* Retro green on hover */
 }
+
+
+
+.post {
+    font-family: 'Perfect DOS VGA 437', 'Perfect DOS VGA 437 Win', monospace;
+    font-size: 1.2rem; /* Adjust size */
+    color: #FFCC00; /* Yellow color for the article name */
+    text-decoration: none;
+
+    /*text-align: center;*/
+    /*letter-spacing: 0.1em; /* Retro feel */*/
+    /*padding: 5px 10px;*/
+}
+
+/* Hover effects for .post */
+.post:hover {
+    color: #abc123; /* Retro green on hover */
+    background-color: #000; /* Darken background on hover */
+    border: 1px solid #33FF33; /* Border on hover */
+}

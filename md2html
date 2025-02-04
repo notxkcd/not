@@ -1,0 +1,2 @@
+#!/bin/sh
+pandoc $1 --lua-filter=remove-attr.lua $2
